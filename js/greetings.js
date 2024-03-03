@@ -1,3 +1,4 @@
+const loginScreen = document.querySelector(".login");
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
@@ -10,10 +11,12 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 // 함수
 // 1. stop the browser from refresh 2. hide form 3. define input 4. save input in local strage 5. play function paintGreetings
+
 function onLoginSubmit(info) {
   info.preventDefault(); //stop browser default event
   loginForm.classList.add(HIDDEN); // hide the form again
   localStorage.setItem(USERNAME_KEY, loginInput.value); // save the username on local storage
+  loginScreen.style.display = "none";
   paintGreetings(); // call function paint greetings with argument var:username
 }
 

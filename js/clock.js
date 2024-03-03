@@ -1,4 +1,4 @@
-const clock = document.querySelector("h2#clock"); //h2이면서 id clock인 것
+const clocks = document.querySelectorAll("h2#clock"); //h2이면서 id clock인 것
 
 //recreate new Date() object every second
 //String() : .getHours() 의 결과값은 number -> .padStart를 적용하려면 string으로 변환필요
@@ -7,7 +7,9 @@ function getClock() {
   const hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  for (const clock of clocks) {
+    clock.innerText = `${hours}:${minutes}:${seconds}`;
+  }
 }
 
 // interval은 1초 후 function을 시작하므로 웹사이트가 로딩되자마자는 아무것도 작동안함

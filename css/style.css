@@ -1,12 +1,109 @@
+html,
 body {
-  background: rgb(238, 174, 202);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  font-family: "Jost", sans-serif;
+}
+body {
+  background: rgba(238, 174, 202, 0.5);
   background: linear-gradient(
     45deg,
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
+  margin: 0;
+}
+input {
+  width: 12.5rem;
 }
 
+/*중요*/
 .hidden {
   display: none;
+}
+.left_1_2rem {
+  left: 1.2rem;
+}
+button {
+  border: none;
+  background: none;
+}
+
+/*나머지*/
+.login {
+  background: white;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login > #clock {
+  margin: 0;
+  vertical-align: middle;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+.greeting-clock {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 1.2rem;
+}
+.greeting-clock h2 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;
+}
+.greeting-clock h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+#topLeft {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  width: 36rem;
+}
+#weather,
+#quote {
+  margin-bottom: 0.8rem;
+}
+#weather {
+  font-weight: 300;
+}
+#quote span {
+  display: block;
+  font-weight: 400;
+}
+#quote span:last-child {
+  /*padding-top: 0.3rem;*/
+}
+.img-16rem {
+  width: 16rem;
+  height: auto;
+  overflow: hidden;
+}
+.img-16rem img {
+  width: 100%;
+}
+#todo-form {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 2.8rem;
+}
+.todolist {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  width: 12.5rem;
+}
+#todo-list {
+  text-align: right;
+  float: right;
+  list-style-type: none;
+  margin: 0;
 }
